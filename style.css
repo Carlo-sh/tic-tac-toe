@@ -1,0 +1,147 @@
+:root {
+	--bg-color: #ca8a04;
+	--btn-color: #fefce8;
+	--btn-bg-color: #713f12;
+	--grid-light-color: #2c4a2b;
+	--grid-dark-color: #182417;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	font-family: 'Lato', sans-serif;
+	background-color: var(--bg-color);
+}
+
+#title {
+	text-align: center;
+	padding: 20px 0;
+}
+
+/* --------------------------------------------- */
+
+#players {
+	height: 80px;
+	margin-bottom: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 25px;
+}
+
+.players,
+#player-btns {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.players label {
+	font-size: 1.3rem;
+}
+
+.players input {
+	height: 26px;
+}
+
+.players input:focus {
+	outline: none;
+	box-shadow: 0 0 8px 4px var(--grid-light-color);
+	font-size: 1.1rem;
+	max-width: 181px;
+}
+
+#player-btns button {
+	width: 120px;
+	height: 30px;
+	background-color: var(--btn-bg-color);
+	color: var(--btn-color);
+	font-size: 1rem;
+	font-weight: bold;
+	font-family: 'Lato', sans-serif;
+	border: none;
+	border-bottom: 4px solid #000000;
+	border-radius: 10px;
+}
+
+#player-btns button:hover {
+	cursor: pointer;
+	background-color: var(--btn-color);
+	color: var(--btn-bg-color);
+}
+
+/* -------------------------------------------- */
+
+#board {
+	margin: 0 auto;
+	display: grid;
+	width: 330px;
+	height: 330px;
+	grid-template-columns: repeat(3, 1fr);
+	background: radial-gradient(var(--grid-light-color), var(--grid-dark-color));
+	box-shadow: 0 0 5px 5px #000000;
+}
+
+.cell {
+	border: 1px solid #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 110px;
+	width: 110px;
+}
+
+.cell:hover {
+	background-color: #3f6212;
+}
+
+#cell-1,
+#cell-2,
+#cell-3 {
+	border-top: none;
+}
+
+#cell-3,
+#cell-6,
+#cell-9 {
+	border-right: none;
+}
+
+#cell-7,
+#cell-8,
+#cell-9 {
+	border-bottom: none;
+}
+
+#cell-1,
+#cell-4,
+#cell-7 {
+	border-left: none;
+}
+
+/* --------------------------------------- */
+
+.player-turn {
+	width: 60%;
+	margin: 20px auto;
+}
+
+#turn {
+	text-align: center;
+}
+
+img {
+	width: 70%;
+	height: 70%;
+}
+
+h2 {
+	text-transform: capitalize;
+}
